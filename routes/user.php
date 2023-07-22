@@ -10,3 +10,6 @@ Route::get('logout', [UserController::class, 'userLogout']);
 Route::post('create/task', [UserController::class, 'createUserTask']);
 Route::post('task/assign', [UserController::class, 'taskAssign']);
 
+Route::get('get/all', [UserController::class, 'getAllUserList']);
+Route::get('task/get/all', [UserController::class, 'getAllTaskList']);
+

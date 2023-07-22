@@ -167,4 +167,14 @@ class UserController extends Controller
         return response(['msg'=>'user not log in'],406);
         
     }
+    public function getAllUserList(Request $request)
+    {
+        return User::select('uuid as value','name as label')->get();
+        
+    }
+    public function getAllTaskList(Request $request)
+    {
+        return Task::select('uuid as value','name as label')->get();
+        
+    }
 }
